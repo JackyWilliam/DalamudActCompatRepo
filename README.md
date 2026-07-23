@@ -5,7 +5,7 @@ Custom Dalamud repository for Dalamud ACT Compat.
 Users add this raw URL in Dalamud:
 
 ```text
-https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/refs/heads/main/pluginmaster.json
+https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/pluginmaster.json
 ```
 
 This repository should contain only the public repository metadata. The plugin source and release ZIP live in:
@@ -27,5 +27,5 @@ gh repo create JackyWilliam/DalamudActCompatRepo --public --source . --remote or
 Then verify:
 
 ```text
-https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/refs/heads/main/pluginmaster.json
+https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/pluginmaster.json
 ```
