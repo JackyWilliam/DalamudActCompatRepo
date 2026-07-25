@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.2.0.0",
+    "AssemblyVersion":  "0.2.1.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.0/latest.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.1/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.0/latest.zip",
-    "LastUpdate":  "1784985976",
-    "Changelog":  "新增脱战结算与职业识别、Meter 个性化、图形化 ACT 插件目录和安装入口，并加入第三方 ACT 插件实验性兼容；第三方插件需从作者项目自行下载。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.1/DalamudActCompat.zip",
+    "LastUpdate":  "1784987828",
+    "Changelog":  "支持直接安装常用 ACT 插件 DLL/ZIP 和依赖，修正 Cactbot/CactbotSelf 分类，接入中文版 Triggernometry 战斗事件，并新增简体中文界面。"
 }
 ]
