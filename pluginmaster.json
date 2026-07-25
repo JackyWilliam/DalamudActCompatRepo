@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.2.2.0",
+    "AssemblyVersion":  "0.2.4.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.2/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.4/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.2/DalamudActCompat.zip",
-    "LastUpdate":  "1784988927",
-    "Changelog":  "脱战冻结最终 DPS，新战斗自动重置；增加刷新间隔、副本单人死亡保护、独立战斗日志历史和 ACT 扩展配置入口。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.4/DalamudActCompat.zip",
+    "LastUpdate":  "1784989656",
+    "Changelog":  "修复 ACT 扩展配置窗口；日志历史可视化；Meter 支持 ACT DPS、EncDPS、ExtDPS 三种真实口径。"
 }
 ]
