@@ -12,9 +12,9 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.0/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.0/latest.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.0/DalamudActCompat.zip",
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.0/latest.zip",
     "LastUpdate":  "1784985976",
     "Changelog":  "新增脱战结算与职业识别、Meter 个性化、图形化 ACT 插件目录和安装入口，并加入第三方 ACT 插件实验性兼容；第三方插件需从作者项目自行下载。"
 }
