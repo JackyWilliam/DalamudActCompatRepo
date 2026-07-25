@@ -15,7 +15,7 @@
     "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.10/DalamudActCompat.zip",
     "DownloadLinkTesting": null,
     "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.10/DalamudActCompat.zip",
-    "LastUpdate": "1784993400",
+    "LastUpdate": 1784993087089,
     "Changelog": "记录第三方 ACT 扩展内部捕获的完整初始化异常，修正初始化失败仍被误报为加载成功的问题。"
   }
 ]
