@@ -3,7 +3,7 @@
     "Author": "raynording",
     "Name": "Dalamud ACT Compat",
     "InternalName": "DalamudActCompat",
-    "AssemblyVersion": "0.2.8.0",
+    "AssemblyVersion": "0.2.9.0",
     "TestingAssemblyVersion": null,
     "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel": 15,
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.8/DalamudActCompat.zip",
+    "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.9/DalamudActCompat.zip",
     "DownloadLinkTesting": null,
-    "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.8/DalamudActCompat.zip",
-    "LastUpdate": "1784991866",
-    "Changelog": "修复 Triggernometry 配置页零尺寸空白，并补齐 FoxTTS 托盘按钮布局接口。"
+    "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.9/DalamudActCompat.zip",
+    "LastUpdate": "1784992267",
+    "Changelog": "修复 FoxTTS/Triggernometry 根控件空白，并停止 PostNamazu 不兼容注入的无限重试。"
   }
 ]
