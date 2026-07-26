@@ -1,21 +1,21 @@
 [
-  {
-    "Author": "raynording",
-    "Name": "Dalamud ACT Compat",
-    "InternalName": "DalamudActCompat",
-    "AssemblyVersion": "0.2.16.0",
-    "TestingAssemblyVersion": null,
-    "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
-    "Punchline": "In-game ACT-compatible parsing platform foundation.",
-    "RepoUrl": "https://github.com/JackyWilliam/DalamudActCompat",
-    "ApplicableVersion": "any",
-    "DalamudApiLevel": 15,
-    "IsHide": false,
-    "IsTestingExclusive": false,
-    "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.16/DalamudActCompat.zip",
-    "DownloadLinkTesting": null,
-    "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.16/DalamudActCompat.zip",
-    "LastUpdate": 1785053322779,
-    "Changelog": "修复 Triggernometry 区域切换订阅和 Roslyn 脚本程序集加载。"
-  }
+{
+    "Author":  "raynording",
+    "Name":  "Dalamud ACT Compat",
+    "InternalName":  "DalamudActCompat",
+    "AssemblyVersion":  "0.2.17.0",
+    "TestingAssemblyVersion":  null,
+    "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
+    "Punchline":  "In-game ACT-compatible parsing platform foundation.",
+    "RepoUrl":  "https://github.com/JackyWilliam/DalamudActCompat",
+    "ApplicableVersion":  "any",
+    "DalamudApiLevel":  15,
+    "IsHide":  false,
+    "IsTestingExclusive":  false,
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.17/DalamudActCompat.zip",
+    "DownloadLinkTesting":  null,
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.17/DalamudActCompat.zip",
+    "LastUpdate":  1785054009365,
+    "Changelog":  "新增 Cactbot raidboss 警报窗口，接入 OverlayPlugin WebSocket，并支持文字、音频与 TTS 播放链路。"
+}
 ]
