@@ -1,21 +1,21 @@
 [
-{
-    "Author":  "raynording",
-    "Name":  "Dalamud ACT Compat",
-    "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.2.13.0",
-    "TestingAssemblyVersion":  null,
-    "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
-    "Punchline":  "In-game ACT-compatible parsing platform foundation.",
-    "RepoUrl":  "https://github.com/JackyWilliam/DalamudActCompat",
-    "ApplicableVersion":  "any",
-    "DalamudApiLevel":  15,
-    "IsHide":  false,
-    "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.13/DalamudActCompat.zip",
-    "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.13/DalamudActCompat.zip",
-    "LastUpdate":  1785050307122,
-    "Changelog":  "修复 FoxTTS SettingsSerializer 继承兼容；为 Triggernometry 2.1.1.x 增加 .NET 10 BinaryFormatter 与旧 WinForms 对象资源兼容。此版本仍需游戏内完整功能验收。"
-}
+  {
+    "Author": "raynording",
+    "Name": "Dalamud ACT Compat",
+    "InternalName": "DalamudActCompat",
+    "AssemblyVersion": "0.2.14.0",
+    "TestingAssemblyVersion": null,
+    "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
+    "Punchline": "In-game ACT-compatible parsing platform foundation.",
+    "RepoUrl": "https://github.com/JackyWilliam/DalamudActCompat",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 15,
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.14/DalamudActCompat.zip",
+    "DownloadLinkTesting": null,
+    "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.14/DalamudActCompat.zip",
+    "LastUpdate": 1785051714511,
+    "Changelog": "修复 Triggernometry 在 .NET 10 下无法加载：移除 BinaryFormatter 依赖，并安全转换旧 WinForms 资源。"
+  }
 ]
