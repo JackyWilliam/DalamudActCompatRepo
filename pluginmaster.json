@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.2.24.0",
+    "AssemblyVersion":  "0.2.25.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.24/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.25/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.24/DalamudActCompat.zip",
-    "LastUpdate":  1785142728007,
-    "Changelog":  "修复 Cactbot 启动时错过区域事件后不加载通用触发器的问题，恢复挑衅、无敌等原生文字与 TTS 链路；新增悬浮窗一键编辑/完成编辑，统一切换鼠标穿透和位置锁定。职业、名字、死亡与其他扩展继续等待实机验收。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.25/DalamudActCompat.zip",
+    "LastUpdate":  1785156378210,
+    "Changelog":  "修正 Cactbot 默认输出配置迁移，使挑衅、神圣领域等 infoText 通过 FoxTTS 播报；在高页面缩放和较矮窗口下自适应上移信息文字，避免提示被底部裁掉。"
 }
 ]
