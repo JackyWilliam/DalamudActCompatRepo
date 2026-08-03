@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.3.0.0",
+    "AssemblyVersion":  "0.3.1.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.0/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.1/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.0/DalamudActCompat.zip",
-    "LastUpdate":  1785754552144,
-    "Changelog":  "新增游戏内 ACT 快捷按钮与简洁控制中心：左键打开设置、右键开关 Meter、按住中键拖动；保留 Cactbot、HTML Overlay、已创建悬浮窗和完整高级设置，并整理 Meter 视觉。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.1/DalamudActCompat.zip",
+    "LastUpdate":  1785758849071,
+    "Changelog":  "重做 ACT 控制中心、战斗统计悬浮窗与战斗历史界面；新增扩展入口、玩家 ID 遮盖/职业替换及可选 FFLogs 本地估算；优化高清快捷按钮与 Cactbot 职业显示。"
 }
 ]
