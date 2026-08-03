@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.2.34.0",
+    "AssemblyVersion":  "0.3.0.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.34/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.0/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.2.34/DalamudActCompat.zip",
-    "LastUpdate":  1785667059686,
-    "Changelog":  "将 ACT 兼容插件迁移到独立宿主进程，隔离第三方插件故障；修复 Triggernometry 仓库更新、Cactbot/FoxTTS 语音桥接、PostNamazu 普通用户端口监听与重启竞态。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.0/DalamudActCompat.zip",
+    "LastUpdate":  1785754552144,
+    "Changelog":  "新增游戏内 ACT 快捷按钮与简洁控制中心：左键打开设置、右键开关 Meter、按住中键拖动；保留 Cactbot、HTML Overlay、已创建悬浮窗和完整高级设置，并整理 Meter 视觉。"
 }
 ]
