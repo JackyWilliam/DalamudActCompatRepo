@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.3.1.0",
+    "AssemblyVersion":  "0.3.2.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.1/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.2/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.1/DalamudActCompat.zip",
-    "LastUpdate":  1785758849071,
-    "Changelog":  "重做 ACT 控制中心、战斗统计悬浮窗与战斗历史界面；新增扩展入口、玩家 ID 遮盖/职业替换及可选 FFLogs 本地估算；优化高清快捷按钮与 Cactbot 职业显示。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.2/DalamudActCompat.zip",
+    "LastUpdate":  1785826358353,
+    "Changelog":  "修复 Triggernometry C# 脚本自引用和 ACT 通用 HTML 悬浮窗开关；战斗统计支持单人紧凑、多人每人单行、DPS/HPS 排序、伤害占比/死亡数及五种职业标识。"
 }
 ]
