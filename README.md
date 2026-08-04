@@ -14,7 +14,7 @@ This repository should contain only the public repository metadata. The plugin s
 https://github.com/JackyWilliam/DalamudActCompat
 ```
 
-Current status: development preview metadata only. The referenced `v0.1.0` release ZIP still needs to be built and uploaded before users can install from this repository.
+The metadata on `main` points to the latest published release ZIP, so existing users keep the same repository URL across updates.
 
 ## Publish
 
