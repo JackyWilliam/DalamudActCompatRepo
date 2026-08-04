@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.3.2.0",
+    "AssemblyVersion":  "0.3.3.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,10 +12,10 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.2/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.3/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.2/DalamudActCompat.zip",
-    "LastUpdate":  1785826358353,
-    "Changelog":  "修复 Triggernometry C# 脚本自引用和 ACT 通用 HTML 悬浮窗开关；战斗统计支持单人紧凑、多人每人单行、DPS/HPS 排序、伤害占比/死亡数及五种职业标识。"
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.3/DalamudActCompat.zip",
+    "LastUpdate":  1785831031198,
+    "Changelog":  "修复 ACT 与 Cactbot 悬浮窗交互、中文区域名和 Triggernometry 管理员误报警告；副本内跨 Boss 聚合统计，仅离开副本时结算，野外与木人仍按脱战结算。"
 }
 ]
