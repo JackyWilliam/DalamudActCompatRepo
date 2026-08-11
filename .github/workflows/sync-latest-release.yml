@@ -1,0 +1,62 @@
+name: Sync latest release
+
+on:
+  schedule:
+    # Offset the quarter-hour checks to avoid GitHub Actions' busiest minute.
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Rewrite metadata even when the version is already current"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-latest-dalamud-act-compat-release
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Read latest source release
+        id: sync
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          $arguments = @()
+          if ("${{ github.event_name }}" -eq "workflow_dispatch" -and
+              "${{ inputs.force }}" -eq "true") {
+            $arguments += "-Force"
+          }
+          ./tools/sync-latest-release.ps1 @arguments
+
+      - name: Validate generated metadata
+        if: steps.sync.outputs.changed == 'true'
+        shell: pwsh
+        run: |
+          Get-Content pluginmaster.json -Raw -Encoding utf8 | ConvertFrom-Json | Out-Null
+          git diff --check
+
+      - name: Commit updated PluginMaster
+        if: steps.sync.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pluginmaster.json
+          git commit -m "chore: 自动同步 Dalamud ACT Compat ${{ steps.sync.outputs.version }}"
+          git push origin HEAD:main
