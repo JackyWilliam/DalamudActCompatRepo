@@ -36,34 +36,6 @@ function Get-LatestRelease {
         "User-Agent" = "DalamudActCompatRepo-release-sync"
     }
     $releaseBaseUri = "https://github.com/$SourceRepository/releases"
-    $latestResponse = Invoke-WebRequest `
-        -Uri "$releaseBaseUri/latest" `
-        -Headers $headers `
-        -Method Head `
-        -MaximumRedirection 10 `
-        -UseBasicParsing
-
-    $baseResponse = $latestResponse.BaseResponse
-    $responseUriProperty = $baseResponse.PSObject.Properties['ResponseUri']
-    $requestMessageProperty = $baseResponse.PSObject.Properties['RequestMessage']
-    $latestUri = if ($null -ne $responseUriProperty) {
-        [Uri]$responseUriProperty.Value
-    }
-    elseif ($null -ne $requestMessageProperty) {
-        [Uri]$requestMessageProperty.Value.RequestUri
-    }
-    else {
-        throw "Unable to determine the final stable release URL."
-    }
-
-    # GitHub's /latest redirect excludes prereleases without requiring cross-repository API access.
-    $tagPrefix = "$releaseBaseUri/tag/"
-    $latestPageUri = $latestUri.GetLeftPart([UriPartial]::Path)
-    if (-not $latestPageUri.StartsWith($tagPrefix, [StringComparison]::Ordinal)) {
-        throw "Latest release URL '$latestPageUri' does not belong to '$SourceRepository'."
-    }
-    $tag = [Uri]::UnescapeDataString($latestPageUri.Substring($tagPrefix.Length)).Trim('/')
-
     $feedResponse = Invoke-WebRequest `
         -Uri "$releaseBaseUri.atom" `
         -Headers $headers `
@@ -73,16 +45,42 @@ function Get-LatestRelease {
     $namespaceManager.AddNamespace('atom', 'http://www.w3.org/2005/Atom')
 
     $matchingEntry = $null
+    $latestVersion = $null
+    $tag = $null
     foreach ($feedEntry in $feed.SelectNodes('/atom:feed/atom:entry', $namespaceManager)) {
+        $titleNode = $feedEntry.SelectSingleNode('atom:title', $namespaceManager)
         $linkNode = $feedEntry.SelectSingleNode("atom:link[@rel='alternate']", $namespaceManager)
-        if ($null -ne $linkNode -and
-            $linkNode.GetAttribute('href').TrimEnd('/') -eq $latestPageUri.TrimEnd('/')) {
+        if ($null -eq $titleNode -or $null -eq $linkNode) {
+            continue
+        }
+
+        $candidateTag = $titleNode.InnerText.Trim()
+        if ($candidateTag -notmatch '^v(?<version>\d+\.\d+\.\d+(?:\.\d+)?)$') {
+            continue
+        }
+        $candidateVersionText = $Matches.version
+        $candidateParts = $candidateVersionText.Split('.')
+        $candidateAssemblyVersion = if ($candidateParts.Count -eq 3) {
+            "$candidateVersionText.0"
+        }
+        else {
+            $candidateVersionText
+        }
+        $candidateVersion = [Version]$candidateAssemblyVersion
+        $expectedTagUri = "$releaseBaseUri/tag/$candidateTag"
+        if ($linkNode.GetAttribute('href').TrimEnd('/') -ne $expectedTagUri) {
+            continue
+        }
+
+        # Source releases are always stable numeric tags; ordering by Version avoids relying on feed order.
+        if ($null -eq $latestVersion -or $candidateVersion -gt $latestVersion) {
+            $latestVersion = $candidateVersion
+            $tag = $candidateTag
             $matchingEntry = $feedEntry
-            break
         }
     }
     if ($null -eq $matchingEntry) {
-        throw "Stable release '$tag' was not found in the public release feed."
+        throw "No supported stable numeric release was found in the public release feed."
     }
 
     $updatedNode = $matchingEntry.SelectSingleNode('atom:updated', $namespaceManager)
