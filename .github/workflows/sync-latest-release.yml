@@ -35,12 +35,9 @@ jobs:
         id: sync
         shell: pwsh
         run: |
-          $arguments = @()
-          if ("${{ github.event_name }}" -eq "workflow_dispatch" -and
-              "${{ inputs.force }}" -eq "true") {
-            $arguments += "-Force"
-          }
-          ./tools/sync-latest-release.ps1 @arguments
+          $forceSync = "${{ github.event_name }}" -eq "workflow_dispatch" -and
+            "${{ inputs.force }}" -eq "true"
+          ./tools/sync-latest-release.ps1 -Force:$forceSync
 
       - name: Validate generated metadata
         if: steps.sync.outputs.changed == 'true'

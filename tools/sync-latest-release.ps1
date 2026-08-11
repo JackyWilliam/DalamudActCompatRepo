@@ -33,111 +33,15 @@ function Get-LatestRelease {
     }
 
     $headers = @{
-        "User-Agent" = "DalamudActCompatRepo-release-sync"
-    }
-    $releaseBaseUri = "https://github.com/$SourceRepository/releases"
-    $feedResponse = Invoke-WebRequest `
-        -Uri "$releaseBaseUri.atom" `
-        -Headers $headers `
-        -UseBasicParsing
-    $feed = [xml]$feedResponse.Content
-    $namespaceManager = New-Object System.Xml.XmlNamespaceManager($feed.NameTable)
-    $namespaceManager.AddNamespace('atom', 'http://www.w3.org/2005/Atom')
-
-    $matchingEntry = $null
-    $latestVersion = $null
-    $tag = $null
-    foreach ($feedEntry in $feed.SelectNodes('/atom:feed/atom:entry', $namespaceManager)) {
-        $titleNode = $feedEntry.SelectSingleNode('atom:title', $namespaceManager)
-        $linkNode = $feedEntry.SelectSingleNode("atom:link[@rel='alternate']", $namespaceManager)
-        if ($null -eq $titleNode -or $null -eq $linkNode) {
-            continue
-        }
-
-        $candidateTag = $titleNode.InnerText.Trim()
-        if ($candidateTag -notmatch '^v(?<version>\d+\.\d+\.\d+(?:\.\d+)?)$') {
-            continue
-        }
-        $candidateVersionText = $Matches.version
-        $candidateParts = $candidateVersionText.Split('.')
-        $candidateAssemblyVersion = if ($candidateParts.Count -eq 3) {
-            "$candidateVersionText.0"
-        }
-        else {
-            $candidateVersionText
-        }
-        $candidateVersion = [Version]$candidateAssemblyVersion
-        $expectedTagUri = "$releaseBaseUri/tag/$candidateTag"
-        if ($linkNode.GetAttribute('href').TrimEnd('/') -ne $expectedTagUri) {
-            continue
-        }
-
-        # Source releases are always stable numeric tags; ordering by Version avoids relying on feed order.
-        if ($null -eq $latestVersion -or $candidateVersion -gt $latestVersion) {
-            $latestVersion = $candidateVersion
-            $tag = $candidateTag
-            $matchingEntry = $feedEntry
-        }
-    }
-    if ($null -eq $matchingEntry) {
-        throw "No supported stable numeric release was found in the public release feed."
+        Accept                 = "application/vnd.github+json"
+        "X-GitHub-Api-Version" = "2022-11-28"
+        "User-Agent"           = "DalamudActCompatRepo-release-sync"
     }
 
-    $updatedNode = $matchingEntry.SelectSingleNode('atom:updated', $namespaceManager)
-    $contentNode = $matchingEntry.SelectSingleNode('atom:content', $namespaceManager)
-    if ($null -eq $updatedNode -or $null -eq $contentNode) {
-        throw "Release feed entry '$tag' is missing its timestamp or notes."
-    }
-
-    $releaseHtml = [Net.WebUtility]::HtmlDecode($contentNode.InnerText)
-    $firstSection = [regex]::Match(
-        $releaseHtml,
-        '(?is)<h2\b[^>]*>.*?</h2>(?<section>.*?)(?=<h2\b|$)')
-    $sectionHtml = if ($firstSection.Success) {
-        $firstSection.Groups['section'].Value
-    }
-    else {
-        $releaseHtml
-    }
-    $markdownLines = [System.Collections.Generic.List[string]]::new()
-    $markdownLines.Add('## Release highlights')
-    foreach ($listItem in [regex]::Matches($sectionHtml, '(?is)<li\b[^>]*>(?<item>.*?)</li>')) {
-        $plainText = [regex]::Replace($listItem.Groups['item'].Value, '<[^>]+>', '')
-        $plainText = [Net.WebUtility]::HtmlDecode($plainText)
-        $plainText = [regex]::Replace($plainText, '\s+', ' ').Trim()
-        if (-not [string]::IsNullOrWhiteSpace($plainText)) {
-            $markdownLines.Add("- $plainText")
-        }
-    }
-
-    $assetUrl = "$releaseBaseUri/download/$tag/DalamudActCompat.zip"
-    $assetResponse = Invoke-WebRequest `
-        -Uri $assetUrl `
-        -Headers $headers `
-        -Method Head `
-        -MaximumRedirection 10 `
-        -UseBasicParsing
-    $contentLengthHeader = $assetResponse.Headers['Content-Length']
-    $contentLengthText = [string](@($contentLengthHeader)[0])
-    $assetSize = 0L
-    if (-not [long]::TryParse($contentLengthText, [ref]$assetSize) -or $assetSize -le 0) {
-        throw "Release '$tag' has no verifiably non-empty DalamudActCompat.zip asset."
-    }
-
-    return [pscustomobject]@{
-        draft        = $false
-        prerelease   = $false
-        tag_name     = $tag
-        published_at = $updatedNode.InnerText
-        body          = $markdownLines -join "`n"
-        assets        = @(
-            [pscustomobject]@{
-                name                 = 'DalamudActCompat.zip'
-                size                 = $assetSize
-                browser_download_url = $assetUrl
-            }
-        )
-    }
+    # The source is public, so the target repository token remains scoped only to target writes.
+    return Invoke-RestMethod `
+        -Uri "https://api.github.com/repos/$SourceRepository/releases/latest" `
+        -Headers $headers
 }
 
 function ConvertTo-InstallerChangelog {
