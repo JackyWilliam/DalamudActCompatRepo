@@ -33,15 +33,113 @@ function Get-LatestRelease {
     }
 
     $headers = @{
-        Accept                 = "application/vnd.github+json"
-        "X-GitHub-Api-Version" = "2022-11-28"
-        "User-Agent"           = "DalamudActCompatRepo-release-sync"
+        "User-Agent" = "DalamudActCompatRepo-release-sync"
+    }
+    $releaseBaseUri = "https://github.com/$SourceRepository/releases"
+    $latestResponse = Invoke-WebRequest `
+        -Uri "$releaseBaseUri/latest" `
+        -Headers $headers `
+        -Method Head `
+        -MaximumRedirection 10 `
+        -UseBasicParsing
+
+    $baseResponse = $latestResponse.BaseResponse
+    $responseUriProperty = $baseResponse.PSObject.Properties['ResponseUri']
+    $requestMessageProperty = $baseResponse.PSObject.Properties['RequestMessage']
+    $latestUri = if ($null -ne $responseUriProperty) {
+        [Uri]$responseUriProperty.Value
+    }
+    elseif ($null -ne $requestMessageProperty) {
+        [Uri]$requestMessageProperty.Value.RequestUri
+    }
+    else {
+        throw "Unable to determine the final stable release URL."
     }
 
-    # A repository-scoped Actions token returns 404 for a different public repository.
-    return Invoke-RestMethod `
-        -Uri "https://api.github.com/repos/$SourceRepository/releases/latest" `
-        -Headers $headers
+    # GitHub's /latest redirect excludes prereleases without requiring cross-repository API access.
+    $tagPrefix = "$releaseBaseUri/tag/"
+    $latestPageUri = $latestUri.GetLeftPart([UriPartial]::Path)
+    if (-not $latestPageUri.StartsWith($tagPrefix, [StringComparison]::Ordinal)) {
+        throw "Latest release URL '$latestPageUri' does not belong to '$SourceRepository'."
+    }
+    $tag = [Uri]::UnescapeDataString($latestPageUri.Substring($tagPrefix.Length)).Trim('/')
+
+    $feedResponse = Invoke-WebRequest `
+        -Uri "$releaseBaseUri.atom" `
+        -Headers $headers `
+        -UseBasicParsing
+    $feed = [xml]$feedResponse.Content
+    $namespaceManager = New-Object System.Xml.XmlNamespaceManager($feed.NameTable)
+    $namespaceManager.AddNamespace('atom', 'http://www.w3.org/2005/Atom')
+
+    $matchingEntry = $null
+    foreach ($feedEntry in $feed.SelectNodes('/atom:feed/atom:entry', $namespaceManager)) {
+        $linkNode = $feedEntry.SelectSingleNode("atom:link[@rel='alternate']", $namespaceManager)
+        if ($null -ne $linkNode -and
+            $linkNode.GetAttribute('href').TrimEnd('/') -eq $latestPageUri.TrimEnd('/')) {
+            $matchingEntry = $feedEntry
+            break
+        }
+    }
+    if ($null -eq $matchingEntry) {
+        throw "Stable release '$tag' was not found in the public release feed."
+    }
+
+    $updatedNode = $matchingEntry.SelectSingleNode('atom:updated', $namespaceManager)
+    $contentNode = $matchingEntry.SelectSingleNode('atom:content', $namespaceManager)
+    if ($null -eq $updatedNode -or $null -eq $contentNode) {
+        throw "Release feed entry '$tag' is missing its timestamp or notes."
+    }
+
+    $releaseHtml = [Net.WebUtility]::HtmlDecode($contentNode.InnerText)
+    $firstSection = [regex]::Match(
+        $releaseHtml,
+        '(?is)<h2\b[^>]*>.*?</h2>(?<section>.*?)(?=<h2\b|$)')
+    $sectionHtml = if ($firstSection.Success) {
+        $firstSection.Groups['section'].Value
+    }
+    else {
+        $releaseHtml
+    }
+    $markdownLines = [System.Collections.Generic.List[string]]::new()
+    $markdownLines.Add('## Release highlights')
+    foreach ($listItem in [regex]::Matches($sectionHtml, '(?is)<li\b[^>]*>(?<item>.*?)</li>')) {
+        $plainText = [regex]::Replace($listItem.Groups['item'].Value, '<[^>]+>', '')
+        $plainText = [Net.WebUtility]::HtmlDecode($plainText)
+        $plainText = [regex]::Replace($plainText, '\s+', ' ').Trim()
+        if (-not [string]::IsNullOrWhiteSpace($plainText)) {
+            $markdownLines.Add("- $plainText")
+        }
+    }
+
+    $assetUrl = "$releaseBaseUri/download/$tag/DalamudActCompat.zip"
+    $assetResponse = Invoke-WebRequest `
+        -Uri $assetUrl `
+        -Headers $headers `
+        -Method Head `
+        -MaximumRedirection 10 `
+        -UseBasicParsing
+    $contentLengthHeader = $assetResponse.Headers['Content-Length']
+    $contentLengthText = [string](@($contentLengthHeader)[0])
+    $assetSize = 0L
+    if (-not [long]::TryParse($contentLengthText, [ref]$assetSize) -or $assetSize -le 0) {
+        throw "Release '$tag' has no verifiably non-empty DalamudActCompat.zip asset."
+    }
+
+    return [pscustomobject]@{
+        draft        = $false
+        prerelease   = $false
+        tag_name     = $tag
+        published_at = $updatedNode.InnerText
+        body          = $markdownLines -join "`n"
+        assets        = @(
+            [pscustomobject]@{
+                name                 = 'DalamudActCompat.zip'
+                size                 = $assetSize
+                browser_download_url = $assetUrl
+            }
+        )
+    }
 }
 
 function ConvertTo-InstallerChangelog {
