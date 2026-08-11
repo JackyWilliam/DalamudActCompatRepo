@@ -3,7 +3,7 @@
     "Author":  "raynording",
     "Name":  "Dalamud ACT Compat",
     "InternalName":  "DalamudActCompat",
-    "AssemblyVersion":  "0.3.8.1",
+    "AssemblyVersion":  "0.3.9.0",
     "TestingAssemblyVersion":  null,
     "Description":  "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
     "Punchline":  "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
     "DalamudApiLevel":  15,
     "IsHide":  false,
     "IsTestingExclusive":  false,
-    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.8.1/DalamudActCompat.zip",
+    "DownloadLinkInstall":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.0/DalamudActCompat.zip",
     "DownloadLinkTesting":  null,
-    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.8.1/DalamudActCompat.zip",
-    "LastUpdate":  1786368511169,
-    "Changelog":  "v0.3.8.1 将 Cactbot 文字提醒与时间轴拆分为可独立管理的悬浮窗；随包安装默认关闭的 SilverDasher，并通过独立事件与权限通道保持现有扩展链路不变。",
+    "DownloadLinkUpdate":  "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.0/DalamudActCompat.zip",
+    "LastUpdate":  1786444380170,
+    "Changelog":  "v0.3.9.0 新增 Matcha 独立 Host 与前台通知路由；自定义悬浮窗自动适配 OverlayPlugin/ACTWS 并补数据、滚轮和重命名；普通 DLL/ZIP 增加预检、权限授权、共享通用 Host、失败反馈和删除；重做控制中心帮助与创建导航。",
     "IconUrl":  "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
