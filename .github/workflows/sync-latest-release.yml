@@ -34,8 +34,6 @@ jobs:
       - name: Read latest source release
         id: sync
         shell: pwsh
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
         run: |
           $arguments = @()
           if ("${{ github.event_name }}" -eq "workflow_dispatch" -and

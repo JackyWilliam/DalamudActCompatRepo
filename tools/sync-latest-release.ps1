@@ -37,10 +37,8 @@ function Get-LatestRelease {
         "X-GitHub-Api-Version" = "2022-11-28"
         "User-Agent"           = "DalamudActCompatRepo-release-sync"
     }
-    if (-not [string]::IsNullOrWhiteSpace($env:GITHUB_TOKEN)) {
-        $headers.Authorization = "Bearer $($env:GITHUB_TOKEN)"
-    }
 
+    # A repository-scoped Actions token returns 404 for a different public repository.
     return Invoke-RestMethod `
         -Uri "https://api.github.com/repos/$SourceRepository/releases/latest" `
         -Headers $headers
@@ -150,7 +148,13 @@ $publishedAt = [DateTimeOffset]::Parse([string]$release.published_at)
 $entry.AssemblyVersion = $assemblyVersion
 $entry.DownloadLinkInstall = $downloadUri.AbsoluteUri
 $entry.DownloadLinkUpdate = $downloadUri.AbsoluteUri
-$entry.LastUpdate = $publishedAt.ToUnixTimeMilliseconds()
+# Manual force runs refresh the timestamp so they exercise the real commit/push path.
+$entry.LastUpdate = if ($Force) {
+    [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+}
+else {
+    $publishedAt.ToUnixTimeMilliseconds()
+}
 $entry.Changelog = ConvertTo-InstallerChangelog -Tag $tag -Body ([string]$release.body)
 
 $json = $entry | ConvertTo-Json -Depth 10
