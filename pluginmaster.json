@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.0",
+  "AssemblyVersion": "0.3.9.5",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.0/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.5/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.0/DalamudActCompat.zip",
-  "LastUpdate": 1786456262187,
-  "Changelog": "v0.3.9.0 随包加入默认启用的 Matcha（抹茶），使用独立 Host 隔离运行，补齐双向网络、日志回注、TTS、通知和专属重启入口。；Matcha 与 SilverDasher 通知会自动识别前台窗口：游戏前台使用 Dalamud 通知，切到其他应用时使用 Windows 通知中心。；自定义 HTML 悬浮窗新增 OverlayPlugin / ACTWS 全自动协议探测、失败重试和手动微调；Matcha 等现代页面可以直接接收数据。；普通 ACT DLL / ZIP 新增静态预检、权限清单、用户授权、共享按需 Host、运行时检查、配置入口、失败反馈和可恢复删除。；悬浮窗支持重命名，锁定、穿透和编辑模式互相独立，并补充透明窗口的滚轮操作。；重整控制中心页面：HTML 创建使用分段导航，概览与战斗统计取消内层滚动；使用帮助改为独立非模态窗口，并加入使用须知与本项目版权声明。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.5/DalamudActCompat.zip",
+  "LastUpdate": 1786528668000,
+  "Changelog": "v0.3.9.5 chore: 移除跨仓库令牌同步流程 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/81；fix: 发布 0.3.9.5 稳定性与成员统计修复 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/82",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
