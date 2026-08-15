@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.5",
+  "AssemblyVersion": "0.3.9.11",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.5/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.11/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.5/DalamudActCompat.zip",
-  "LastUpdate": 1786528668000,
-  "Changelog": "v0.3.9.5 chore: 移除跨仓库令牌同步流程 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/81；fix: 发布 0.3.9.5 稳定性与成员统计修复 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/82",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.11/DalamudActCompat.zip",
+  "LastUpdate": 1786785420088,
+  "Changelog": "v0.3.9.11 对齐 FFLogs 战斗计时、原始伤害、rDPS、暴击/直击与舞者技巧舞步归因，改善治疗职业等低个人伤害职业预估偏低的问题。；修复持续伤害（DoT）归属延迟时可能漏算的问题。；暴击率和直击率刷新时保留最后一次有效数字，不再在数字跳动间隔短暂显示 --。；点击“完成位置编辑”后正确退出悬浮窗编辑态，恢复鼠标穿透并锁定，不再一直显示编辑边框。；更新宏指令说明，移除无人使用的 /actcompat settings。；保留现有命令习惯，并为帮助页中的宏命令加入一键复制到剪贴板。；Dalamud API Level 15。；沿用现有插件配置与宏命令，不要求用户迁移设置。",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
