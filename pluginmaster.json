@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.11",
+  "AssemblyVersion": "0.3.9.12",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.11/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.12/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.11/DalamudActCompat.zip",
-  "LastUpdate": 1786785420088,
-  "Changelog": "v0.3.9.11 对齐 FFLogs 战斗计时、原始伤害、rDPS、暴击/直击与舞者技巧舞步归因，改善治疗职业等低个人伤害职业预估偏低的问题。；修复持续伤害（DoT）归属延迟时可能漏算的问题。；暴击率和直击率刷新时保留最后一次有效数字，不再在数字跳动间隔短暂显示 --。；点击“完成位置编辑”后正确退出悬浮窗编辑态，恢复鼠标穿透并锁定，不再一直显示编辑边框。；更新宏指令说明，移除无人使用的 /actcompat settings。；保留现有命令习惯，并为帮助页中的宏命令加入一键复制到剪贴板。；Dalamud API Level 15。；沿用现有插件配置与宏命令，不要求用户迁移设置。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.12/DalamudActCompat.zip",
+  "LastUpdate": 1786789333000,
+  "Changelog": "v0.3.9.12 主页“扩展”现在优先显示扩展 DLL 的实际 FileVersion。当 Triggernometry 工具箱只替换鲶鱼精 DLL 时，页面会正确显示实际版本（例如 1.3.6.7），不再只显示旧安装清单。；实际 DLL 与安装清单不一致时，悬停版本号可同时查看两者。安装清单继续用于来源、授权、版本门禁和 SHA-256，不会被静默改写。；游戏内“使用帮助”扩充为九页详细文档，新增 31 项中英文关键词搜索和章节跳转。；新增首次使用、DPS/EncDPS/ExtDPS/rDPS/HPS、DPS Parse、暴直率、FFLogs 日志、悬浮窗、扩展权限、更新与分层排错说明。；宏指令页继续支持逐条复制到剪贴板；/actcompat settings 保持移除。；明确“重启 ACT”在 DACT 中的对应操作：鲶鱼精、Triggernometry、FoxTTS、SilverDasher 使用 /actcompat status → “重启共享 Host”；Matcha 与普通扩展分别重启对应 Host。",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
