@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.18",
+  "AssemblyVersion": "0.3.9.19",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.18/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.19/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.18/DalamudActCompat.zip",
-  "LastUpdate": 1786893537287,
-  "Changelog": "v0.3.9.18 修复绘图、触发器与统计生命周期问题 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/88",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.19/DalamudActCompat.zip",
+  "LastUpdate": 1787236091049,
+  "Changelog": "v0.3.9.19 fix: 发布0.3.9.19绘图与触发器兼容修复 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/89",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
