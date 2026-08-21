@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.23",
+  "AssemblyVersion": "0.3.9.24",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.23/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.24/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.23/DalamudActCompat.zip",
-  "LastUpdate": 1787304732476,
-  "Changelog": "v0.3.9.23 补齐 Polygon 原生贴地、深度遮挡和凹多边形拆分，并支持动态实体跟随、_d、t:0、按类型移除及 ActorVfx 清理。；完善 Triggernometry 与 PostNamazu 兼容，包括战斗中禁止公共场地标点的上游语义。；修复 IINACT WebSocket 监听发生 NotSocket / InvalidArgument 后同步递归重试，导致宿主进程崩溃的问题；现在会熔断旧监听器并只调度一次恢复。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.24/DalamudActCompat.zip",
+  "LastUpdate": 1787310498000,
+  "Changelog": "v0.3.9.24 fix: 修复网络扩展重载与鲶鱼精邮差回调 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/94",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
