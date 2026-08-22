@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.25",
+  "AssemblyVersion": "0.3.9.27",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.25/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.27/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.25/DalamudActCompat.zip",
-  "LastUpdate": 1787393471536,
-  "Changelog": "v0.3.9.25 fix: 修复 Radar、Host 内存保护与统计窗交互 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/95",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.27/DalamudActCompat.zip",
+  "LastUpdate": 1787413455000,
+  "Changelog": "v0.3.9.27 docs: 重写中英文项目说明 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/96；fix: 修复TTS时序与实体同步稳定性 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/97",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
