@@ -17,6 +17,6 @@
   "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.25/DalamudActCompat.zip",
   "LastUpdate": 1787393471536,
   "Changelog": "v0.3.9.25 fix: 修复 Radar、Host 内存保护与统计窗交互 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/95",
-  "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo.png"
+  "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
