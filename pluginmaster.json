@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.24",
+  "AssemblyVersion": "0.3.9.25",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.24/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.25/DalamudActCompat.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.24/DalamudActCompat.zip",
-  "LastUpdate": 1787310498000,
-  "Changelog": "v0.3.9.24 fix: 修复网络扩展重载与鲶鱼精邮差回调 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/94",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.25/DalamudActCompat.zip",
+  "LastUpdate": 1787393471536,
+  "Changelog": "v0.3.9.25 fix: 修复 Radar、Host 内存保护与统计窗交互 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/95",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
 }
 ]
