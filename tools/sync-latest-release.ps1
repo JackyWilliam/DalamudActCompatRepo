@@ -130,11 +130,19 @@ if (-not $Force -and $latestVersion -le $currentVersion) {
     exit 0
 }
 
-$asset = @($release.assets) |
-    Where-Object { $_.name -eq "DalamudActCompat.zip" -and [long]$_.size -gt 0 } |
-    Select-Object -First 1
+$asset = $null
+# New releases keep optional resources outside the installer ZIP; retain the legacy
+# name as a fallback so the repository can still synchronize older release layouts.
+foreach ($assetName in @("DalamudActCompat-core.zip", "DalamudActCompat.zip")) {
+    $asset = @($release.assets) |
+        Where-Object { $_.name -eq $assetName -and [long]$_.size -gt 0 } |
+        Select-Object -First 1
+    if ($null -ne $asset) {
+        break
+    }
+}
 if ($null -eq $asset) {
-    throw "Release '$tag' does not contain a non-empty DalamudActCompat.zip asset."
+    throw "Release '$tag' does not contain a non-empty DalamudActCompat-core.zip or DalamudActCompat.zip asset."
 }
 
 $downloadUri = [Uri]([string]$asset.browser_download_url)

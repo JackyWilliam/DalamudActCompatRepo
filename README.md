@@ -20,7 +20,8 @@ The metadata on `main` points to the latest published release ZIP, so existing u
 
 `.github/workflows/sync-latest-release.yml` checks the source repository's latest
 stable GitHub Release every 15 minutes. When it finds a newer numeric release,
-it validates the `DalamudActCompat.zip` asset, derives the installer changelog
+it validates the preferred `DalamudActCompat-core.zip` asset (with the legacy
+`DalamudActCompat.zip` name retained as a fallback), derives the installer changelog
 from the release highlights, and commits the updated `pluginmaster.json` to this
 repository with its own scoped `GITHUB_TOKEN`.
 
