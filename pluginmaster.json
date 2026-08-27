@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.9.27",
+  "AssemblyVersion": "0.3.10.0",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.27/DalamudActCompat.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.0/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.9.27/DalamudActCompat.zip",
-  "LastUpdate": 1787413455000,
-  "Changelog": "v0.3.9.27 docs: 重写中英文项目说明 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/96；fix: 修复TTS时序与实体同步稳定性 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/97",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.0/DalamudActCompat-core.zip",
+  "LastUpdate": 1787839407000,
+  "Changelog": "v0.3.10.0 feat: 发布0.3.10.0战斗统计与资源分包 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/98",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
