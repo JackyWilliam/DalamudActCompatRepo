@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.10.2",
+  "AssemblyVersion": "0.3.10.3",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.2/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.3/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.2/DalamudActCompat-core.zip",
-  "LastUpdate": 1788098695705,
-  "Changelog": "v0.3.10.2 fix: 发布 0.3.10.2 稳定性与排序更新 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/100",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.3/DalamudActCompat-core.zip",
+  "LastUpdate": 1788100449428,
+  "Changelog": "v0.3.10.3 fix: 发布 0.3.10.3 最高伤害样式热修 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/101",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
