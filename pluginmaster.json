@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.10.1",
+  "AssemblyVersion": "0.3.10.2",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.1/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.2/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.1/DalamudActCompat-core.zip",
-  "LastUpdate": 1787889394000,
-  "Changelog": "v0.3.10.1 修复国际服 7.55h2 队伍与区域数据识别，避免副本统计只出现部分队员。；资源包下载移出插件构造流程；HTTPS 超时、镜像失败时基础解析与界面仍可启动，并优先复用已有缓存。；扩展资源不可用时显示下载按钮；下载中显示进度与取消按钮。核心组件缺失时使用独立确认对话框，不再卡死或跳出主页。；修复“最高伤害”混入治疗、技能归属串人、短战斗显示 00:01，并让最高伤害列随统计窗口宽度自适应。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.2/DalamudActCompat-core.zip",
+  "LastUpdate": 1788098695705,
+  "Changelog": "v0.3.10.2 fix: 发布 0.3.10.2 稳定性与排序更新 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/100",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
