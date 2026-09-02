@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.3.10.4",
+  "AssemblyVersion": "0.3.10.5",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.4/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.5/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.4/DalamudActCompat-core.zip",
-  "LastUpdate": 1788150945000,
-  "Changelog": "v0.3.10.4 修复探索区连续 FATE/CE 后战斗统计继续累计的问题；普通探索内容恢复按开放世界脱战五秒结算。；兵武塔、攻城战、达尔里阿达、血塔、魔塔及魔塔高难改为整场累计，任务结束或离开内部区域后统一封存。；普通副本与女王古殿继续按同一把累计阶段，并在全队团灭后分把。；隔离跨模式边界与迟到 ACT 回调，避免上一场统计污染当前副本或大型任务。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.3.10.5/DalamudActCompat-core.zip",
+  "LastUpdate": 1788337260000,
+  "Changelog": "v0.3.10.5 fix: 为每次解析器启动新建日志 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/103",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
