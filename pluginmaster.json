@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.0.1",
+  "AssemblyVersion": "0.4.0.2",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.1/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.2/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.1/DalamudActCompat-core.zip",
-  "LastUpdate": 1788533728223,
-  "Changelog": "v0.4.0.1 fix: 修复绘图播报与FFLogs日志 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/106",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.2/DalamudActCompat-core.zip",
+  "LastUpdate": 1788535077069,
+  "Changelog": "v0.4.0.2 docs: 补充免费声明与激活码获取方式 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/107；fix: 登录前隐藏帮助入口 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/108",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
