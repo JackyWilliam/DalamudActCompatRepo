@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.0.0",
+  "AssemblyVersion": "0.4.0.1",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.0/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.1/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.0/DalamudActCompat-core.zip",
-  "LastUpdate": 1788444395000,
-  "Changelog": "v0.4.0.0 新增账号注册、登录、自动登录与全局登录门禁；新增加密配置云备份、恢复和回滚；每个账号仅保留最近 2 份不同内容备份；自动同步调整为每次打开游戏并登录后检查，只有配置内容变化时才上传；新增恢复密钥自助改密，并兼容管理员一次性密码重置流程；新增实时账号封禁、机器码封禁、连坐封禁与一次性解封通知；新增好友邀请、邀请关系风险提示和顶部云同步状态入口；重做账号与云同步界面，修复实时封禁崩溃、卡片裁切、帮助搜索框和快捷按钮定位",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.1/DalamudActCompat-core.zip",
+  "LastUpdate": 1788533728223,
+  "Changelog": "v0.4.0.1 fix: 修复绘图播报与FFLogs日志 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/106",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
