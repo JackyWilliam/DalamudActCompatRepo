@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.0.2",
+  "AssemblyVersion": "0.4.0.3",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.2/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.3/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.2/DalamudActCompat-core.zip",
-  "LastUpdate": 1788535077069,
-  "Changelog": "v0.4.0.2 docs: 补充免费声明与激活码获取方式 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/107；fix: 登录前隐藏帮助入口 by @JackyWilliam in https://github.com/JackyWilliam/DalamudActCompat/pull/108",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.3/DalamudActCompat-core.zip",
+  "LastUpdate": 1788581847684,
+  "Changelog": "v0.4.0.3 修复 DACT 主窗口及共用顶部栏窗口拖动时，顶部状态栏与正文不同步、看起来慢半拍的问题。；同步修复经典榜单、横版榜单及 D/T、H 分榜的拖动位置更新，让背景、标题和内容在同一帧移动。；快速来回拖动保持鼠标抓取位置；松手、锁定、定位或关闭后重开时，不再延续旧的拖动状态。；保留顶部按钮、榜单收起/展开、锁定/穿透和布局编辑器预览的原有行为。；FFLogs 预估遇到鉴权或访问拒绝时暂停自动请求；超时、网络及服务异常逐步延长重试间隔，并遵守服务端限流等待，避免多个职业持续重复请求和刷日志。；FFLogs 状态提示区分失败原因、暂停与等待重试；刷新失败保留已有估算缓存，更新凭据或允许重试后可恢复，联网恢复后记录明确日志。错误信息不包含密钥、令牌或响应正文。；修正点击主窗口顶部云状态按钮后弹出的“云同步状态”小面板圆角。",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
