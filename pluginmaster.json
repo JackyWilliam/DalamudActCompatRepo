@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.0.3",
+  "AssemblyVersion": "0.4.0.4",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.3/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.4/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.3/DalamudActCompat-core.zip",
-  "LastUpdate": 1788581847684,
-  "Changelog": "v0.4.0.3 修复 DACT 主窗口及共用顶部栏窗口拖动时，顶部状态栏与正文不同步、看起来慢半拍的问题。；同步修复经典榜单、横版榜单及 D/T、H 分榜的拖动位置更新，让背景、标题和内容在同一帧移动。；快速来回拖动保持鼠标抓取位置；松手、锁定、定位或关闭后重开时，不再延续旧的拖动状态。；保留顶部按钮、榜单收起/展开、锁定/穿透和布局编辑器预览的原有行为。；FFLogs 预估遇到鉴权或访问拒绝时暂停自动请求；超时、网络及服务异常逐步延长重试间隔，并遵守服务端限流等待，避免多个职业持续重复请求和刷日志。；FFLogs 状态提示区分失败原因、暂停与等待重试；刷新失败保留已有估算缓存，更新凭据或允许重试后可恢复，联网恢复后记录明确日志。错误信息不包含密钥、令牌或响应正文。；修正点击主窗口顶部云状态按钮后弹出的“云同步状态”小面板圆角。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.0.4/DalamudActCompat-core.zip",
+  "LastUpdate": 1788705774000,
+  "Changelog": "v0.4.0.4 修复洛在线触发器的绘图表达式兼容：支持 !00、!01 等布尔表达式，补齐十六进制、位运算、逻辑条件、字符串比较、括号条件、arcsin、roundir 和坐标括号处理，避免合法绘图参数被整条拒绝。；修复解析器初始化时系统句柄重复释放和扫描副本未及时清理的问题。；修复开怪后游戏战斗状态尚未更新时，兜底战斗立即结束的问题；修正同一目标再次出现后的战斗时长统计。；修复日志目录切换、旧日志写入器清理，以及死亡统计读取时的并发和缓存问题。；云同步准备、停机、上传和恢复全程增加忙碌保护，防止重复点击启动多次操作。；注册页补充免费激活码获取说明、QQ 群号复制和 Discord 入口。",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
