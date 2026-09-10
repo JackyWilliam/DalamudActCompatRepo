@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.1.0",
+  "AssemblyVersion": "0.4.1.1",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.1.0/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.1.1/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.1.0/DalamudActCompat-core.zip",
-  "LastUpdate": 1788790222000,
-  "Changelog": "v0.4.1.0 新增好友抽屉、账号查找与好友申请、独立聊天窗、在线状态和可选副本分享。每对好友双方合计保留最近 20 条历史和最新 3 条离线待收消息，支持官方只读通知。；新增来信气泡、快捷回复、好友未读条数和申请红点。气泡位置、背景透明度、声音分别可配置，提供四种提示音及试听；历史同步和重复消息不会反复提醒。；与独立安装的 RPets 共用登录，任一插件登录、切号或退出后同步另一边，兼容原有自动登录和配置备份。；修复实体快照丢弃无名称场景物件，恢复洛在线触发器对绝妖星 P1 初始化、8 人分散／2 组分摊及左右半场刀所需的物件数据。；收紧好友抽屉和弹窗布局，修正末条消息预览、滚动与焦点行为。；更新后请完整重启游戏，让新版程序集和 Host 资源生效。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.1.1/DalamudActCompat-core.zip",
+  "LastUpdate": 1789024983000,
+  "Changelog": "v0.4.1.1 更新 FFXIV_ACT_Plugin 与 SDK 至 3.0.3.0、IINACT 至 2.10.3.7、OverlayPlugin 至 0.19.107、Unscrambler 至 7.56.0，同步区域操作码与解混淆配置。；中文 Triggernometry 更新至 2.2.0.1，适配新版区域事件接口和切区时的日志实体缓存清理，保留旧版接口兼容。；同步抹茶、银山雀儿的国服与国际服操作码，避免旧操作码误解析。；同步 FFLogs 日志版本标识，新日志正确记录 IINACT 2.10.3.7 / FFXIV_ACT_Plugin 3.0.3.0；保留 IINACT API 1.6.0。；Cactbot 正式包继续使用 0.37.5；上游源码中的 7.56 新数据将在正式包发布后同步。其余随包扩展已核对版本与文件哈希。",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
