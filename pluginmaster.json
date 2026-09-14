@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.2.0",
+  "AssemblyVersion": "0.4.3.0",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.2.0/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.3.0/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.2.0/DalamudActCompat-core.zip",
-  "LastUpdate": 1789148732000,
-  "Changelog": "v0.4.2.0 新增管理员身份：管理员在游戏内可以无限生成 DACT 激活码，无需额外增加额度。；新增“恭喜您成为管理员”通知，带入场小动效；好友系统中的管理员姓名后显示专属标志。；自定义布局的“最高伤害”栏目支持缩写和完整数字切换。；HTML 悬浮窗新增独立的“脱战隐藏”设置，仅对当前选中的窗口生效，进战后恢复；编辑位置时临时显示。；配套服务端新增管理员发码页面，使用现有 DACT 账号登录；管理员可查看自己的记录、生成激活码和撤销自己未使用的码，无需另外注册。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.3.0/DalamudActCompat-core.zip",
+  "LastUpdate": 1789383965975,
+  "Changelog": "v0.4.3.0 支持用户自行取得并导入原版 Simulant DLL，导入后可启停、打开原版配置及管理权限。；修复初始化地址识别、已有 Hook 兼容和地火实体查询；开始模拟前检查地图与阶段是否就绪。；手动安装扩展增加授权提示，“打开配置”后增加垃圾桶移除按钮，移除前备份文件。；已实测初始化、防火墙开关恢复、地图往返、绝欧 P6 宇宙天箭和绝伊甸 P5 地火。",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
