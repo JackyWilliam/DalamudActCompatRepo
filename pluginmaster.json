@@ -3,7 +3,7 @@
   "Author": "raynording",
   "Name": "Dalamud ACT Compat",
   "InternalName": "DalamudActCompat",
-  "AssemblyVersion": "0.4.3.0",
+  "AssemblyVersion": "0.4.3.1",
   "TestingAssemblyVersion": null,
   "Description": "Self-contained ACT-compatible host with embedded FFXIV_ACT_Plugin, OverlayPlugin, optional plugin packages, and recoverable factory reset.",
   "Punchline": "In-game ACT-compatible parsing platform foundation.",
@@ -12,11 +12,11 @@
   "DalamudApiLevel": 15,
   "IsHide": false,
   "IsTestingExclusive": false,
-  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.3.0/DalamudActCompat-core.zip",
+  "DownloadLinkInstall": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.3.1/DalamudActCompat-core.zip",
   "DownloadLinkTesting": null,
-  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.3.0/DalamudActCompat-core.zip",
-  "LastUpdate": 1789383965975,
-  "Changelog": "v0.4.3.0 支持用户自行取得并导入原版 Simulant DLL，导入后可启停、打开原版配置及管理权限。；修复初始化地址识别、已有 Hook 兼容和地火实体查询；开始模拟前检查地图与阶段是否就绪。；手动安装扩展增加授权提示，“打开配置”后增加垃圾桶移除按钮，移除前备份文件。；已实测初始化、防火墙开关恢复、地图往返、绝欧 P6 宇宙天箭和绝伊甸 P5 地火。",
+  "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.3.1/DalamudActCompat-core.zip",
+  "LastUpdate": 1789625131978,
+  "Changelog": "v0.4.3.1 Release published; see GitHub Release for full notes.",
   "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
 }
 ]
