@@ -1,0 +1,12 @@
+name: Validate repository
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate metadata and independent-entry preservation
+        shell: pwsh
+        run: ./tools/test-sync.ps1
