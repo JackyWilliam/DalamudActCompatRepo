@@ -96,11 +96,12 @@ $resolvedPluginMaster = (Resolve-Path -LiteralPath $PluginMasterPath).Path
 $parsedPluginMaster = Get-Content -LiteralPath $resolvedPluginMaster -Raw -Encoding utf8 |
     ConvertFrom-Json
 $entries = @($parsedPluginMaster | ForEach-Object { $_ })
-if ($entries.Count -ne 1) {
-    throw "Expected exactly one plugin entry in '$resolvedPluginMaster'."
+$mainEntries = @($entries | Where-Object InternalName -eq 'DalamudActCompat')
+if ($mainEntries.Count -ne 1) {
+    throw "Expected exactly one DalamudActCompat entry in '$resolvedPluginMaster'."
 }
 
-$entry = $entries[0]
+$entry = $mainEntries[0]
 $release = Get-LatestRelease
 if ($release.draft -or $release.prerelease) {
     throw "GitHub's latest release endpoint returned a draft or prerelease."
@@ -165,11 +166,13 @@ else {
 }
 $entry.Changelog = ConvertTo-InstallerChangelog -Tag $tag -Body ([string]$release.body)
 
-$json = $entry | ConvertTo-Json -Depth 10
+# Independent utilities share this repository; a main-plugin update must not
+# silently remove them or point them at the main plugin's download archive.
+$json = ConvertTo-Json -InputObject @($entries) -Depth 10
 $utf8NoBom = [System.Text.UTF8Encoding]::new($false)
 [System.IO.File]::WriteAllText(
     $resolvedPluginMaster,
-    "[`n$json`n]`n",
+    "$json`n",
     $utf8NoBom)
 
 Set-WorkflowOutput -Name "changed" -Value "true"
