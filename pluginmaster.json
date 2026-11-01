@@ -36,6 +36,6 @@
     "LastUpdate": 1789711112705,
     "Changelog": "首次发布独立卫月修复插件：内置已验证核心包，备份与失败回滚，保留账号、皮肤和触发器配置。",
     "CanUnloadAsync": true,
-    "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompat/main/src/DalamudActCompat/Assets/act-logo.jpg"
+    "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
   }
 ]
