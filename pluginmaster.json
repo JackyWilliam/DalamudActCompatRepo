@@ -1,7 +1,7 @@
 [
   {
     "Author": "raynording",
-    "Name": "Dalamud ACT Compat",
+    "Name": "DACT",
     "InternalName": "DalamudActCompat",
     "AssemblyVersion": "0.4.5.20",
     "TestingAssemblyVersion": null,
@@ -17,7 +17,7 @@
     "DownloadLinkUpdate": "https://github.com/JackyWilliam/DalamudActCompat/releases/download/v0.4.5.20/DalamudActCompat-core.zip",
     "LastUpdate": 1793820982000,
     "Changelog": "v0.4.5.20 适配 Triggernometry 2.4.3.0：中文维护版 2.4.3.0 为了能取消已排队的动作，调整了动作执行入口的参数。DACT 的兼容改写因此失配，Triggernometry 无法加载，扩展页“打开配置”没有反应。现已兼容，随包 Triggernometry 同步更新至 2.4.3.0。",
-    "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/act-logo-512.png"
+    "IconUrl": "https://raw.githubusercontent.com/JackyWilliam/DalamudActCompatRepo/main/dact-logo-512.png"
   },
   {
     "Author": "raynording",
