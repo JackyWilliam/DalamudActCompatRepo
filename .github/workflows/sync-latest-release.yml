@@ -34,6 +34,10 @@ jobs:
       - name: Read latest source release
         id: sync
         shell: pwsh
+        env:
+          # Identifies the request to the GitHub API. Anonymous requests are counted against
+          # the runner's shared IP address and regularly hit its rate limit.
+          GH_TOKEN: ${{ github.token }}
         run: |
           $forceSync = "${{ github.event_name }}" -eq "workflow_dispatch" -and
             "${{ inputs.force }}" -eq "true"

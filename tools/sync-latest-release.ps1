@@ -38,7 +38,17 @@ function Get-LatestRelease {
         "User-Agent"           = "DalamudActCompatRepo-release-sync"
     }
 
-    # The source is public, so the target repository token remains scoped only to target writes.
+    # Anonymous requests are limited per IP address, and a hosted runner shares its address
+    # with other jobs: about one sync in four failed with "API rate limit exceeded". The
+    # workflow token only identifies the request, so it is counted against this repository
+    # instead. Reading a public repository's release needs no permission, and the token can
+    # still write nowhere but here. Without a token (a local run) the request stays anonymous.
+    $authenticated = -not [string]::IsNullOrWhiteSpace($env:GH_TOKEN)
+    if ($authenticated) {
+        $headers["Authorization"] = "Bearer $env:GH_TOKEN"
+    }
+    Write-Host "Reading the latest release of $SourceRepository $(if ($authenticated) { 'with a token' } else { 'anonymously' })."
+
     return Invoke-RestMethod `
         -Uri "https://api.github.com/repos/$SourceRepository/releases/latest" `
         -Headers $headers
